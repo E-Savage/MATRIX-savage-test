@@ -36,3 +36,20 @@ More specifically, we read Scenario2.yaml as a dictionary and then we replace th
 Regarding the ChallengeWrapper Observation, we noticed that the order which every triplet of hosts' information is created by the order that every host is met by the agent. By this logic, the initial host that the Attacker starts at will always be appended at the observation first, not depending on who the host will be. In order to avoid this, we set a specific order of the topology's hosts based on the following list:
 ['User0', 'User1', 'User2', 'User3', 'User4', 'Enterprise0', 'Enterprise1', 'Enterprise2', 'Defender', 'Op_Server0', 'Op_Host0', 'Op_Host1', 'Op_Host2']
 The order is maintained using the TrueTableWrapper when using the RedTableWrapper and the action_mapping_dict when using the RedTable. All of those changes were done on the _create_vector function.
+
+## Citation
+
+If you use this work, please cite our paper:
+
+### BibTeX
+
+```bibtex
+@inproceedings{nwodo2026enter,
+  title={Enter the {MATRIX}: Learning \& Validating Cybersecurity Strategies in Hybrid Simulation \& Emulation Environments},
+  author={Nwodo, Kenechukwu and Van Roy, Justin and Hnedzko, Dziyana and Stavrou, Angelos},
+  booktitle={2026 IEEE Conference on Dependable and Secure Computing (DSC)},
+  pages={1--8},
+  year={2026},
+  organization={IEEE}
+}
+```
