@@ -32,7 +32,9 @@ class CybORG (CybORGLogger):
         Map from agent name to agent interface for all agents to be used internally.
         If None agents will be loaded from description in scenario file (default=None).
     """
-    supported_envs = ['sim', 'aws']
+    # supported_envs = ['sim', 'aws']
+
+    supported_envs = ['sim']
 
     def __init__(self,
                  scenario_file: str,
